@@ -42,26 +42,6 @@ Installed versions use an isolated Unreleased Glass profile and check `GoodFight
 
 ---
 
-## For Developers
-
-Active branch: `app`. Requires **Node.js 22** and `npm`:
-
-```bash
-npm ci
-npm run build
-npm run electron:dev
-```
-
-Build a local installer (`release/`):
-
-```bash
-npm run electron:build -- --win --publish never
-npm run electron:build -- --linux --publish never
-npm run electron:build -- --mac --publish never
-```
-
-See [docs/RELEASING.md](docs/RELEASING.md), [docs/VALIDATION.md](docs/VALIDATION.md), and [AGENTS.md](AGENTS.md) for architecture, release workflows, and verification commands.
-
 ## Credits & License
 
 Built on top of [Juice-WRLD-API/Unreleased](https://github.com/Juice-WRLD-API/Unreleased). See [LICENSE](LICENSE) for details.
