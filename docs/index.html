@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Unreleased Glass — Download</title>
+  <meta name="description" content="Download Unreleased Glass for Windows, macOS, and Linux. Liquid Glass desktop player for Juice WRLD's released and unreleased music." />
+  <style>
+    :root {
+      --bg: #09090d;
+      --surface: rgba(255, 255, 255, 0.06);
+      --surface-hover: rgba(255, 255, 255, 0.11);
+      --border: rgba(255, 255, 255, 0.14);
+      --text: #f5f5f7;
+      --muted: rgba(245, 245, 247, 0.68);
+      --accent: #ef4444;
+      --accent-2: #f59e0b;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      min-height: 100vh;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Inter, sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(900px 520px at 15% 10%, rgba(239, 68, 68, 0.22), transparent 60%),
+        radial-gradient(800px 500px at 85% 20%, rgba(245, 158, 11, 0.16), transparent 60%),
+        radial-gradient(700px 600px at 50% 90%, rgba(168, 85, 247, 0.14), transparent 65%),
+        var(--bg);
+      line-height: 1.5;
+      padding: 40px 20px 64px;
+    }
+
+    .wrap {
+      max-width: 920px;
+      margin: 0 auto;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 40px 28px;
+      border-radius: 28px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      backdrop-filter: blur(26px) saturate(150%);
+      -webkit-backdrop-filter: blur(26px) saturate(150%);
+      box-shadow: 0 24px 70px rgba(0, 0, 0, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.14);
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 14px;
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text);
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      margin-bottom: 18px;
+    }
+
+    .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #22c55e;
+      box-shadow: 0 0 10px #22c55e;
+    }
+
+    h1 {
+      font-size: clamp(2rem, 4.5vw, 3.1rem);
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      margin-bottom: 12px;
+    }
+
+    .subtitle {
+      max-width: 620px;
+      margin: 0 auto 28px;
+      color: var(--muted);
+      font-size: 1.05rem;
+    }
+
+    .primary-cta {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 15px 30px;
+      border-radius: 16px;
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #fff;
+      text-decoration: none;
+      background: linear-gradient(135deg, var(--accent), #dc2626);
+      box-shadow: 0 12px 32px rgba(239, 68, 68, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.25);
+      transition: transform 0.18s cubic-bezier(0.22, 1, 0.36, 1), filter 0.18s ease;
+    }
+
+    .primary-cta:hover {
+      transform: translateY(-2px);
+      filter: brightness(1.07);
+    }
+
+    .primary-meta {
+      margin-top: 10px;
+      font-size: 0.88rem;
+      color: var(--muted);
+    }
+
+    .platforms {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+      gap: 12px;
+      margin-top: 28px;
+      text-align: left;
+    }
+
+    .platform-card {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      padding: 14px 16px;
+      border-radius: 16px;
+      text-decoration: none;
+      color: var(--text);
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.11);
+      transition: transform 0.18s cubic-bezier(0.22, 1, 0.36, 1), background 0.18s ease, border-color 0.18s ease;
+    }
+
+    .platform-card:hover {
+      transform: translateY(-2px);
+      background: var(--surface-hover);
+      border-color: rgba(255, 255, 255, 0.24);
+    }
+
+    .platform-card.active {
+      border-color: rgba(239, 68, 68, 0.55);
+      background: rgba(239, 68, 68, 0.1);
+    }
+
+    .platform-name {
+      font-weight: 700;
+      font-size: 0.96rem;
+    }
+
+    .platform-sub {
+      font-size: 0.82rem;
+      color: var(--muted);
+    }
+
+    .tips {
+      margin-top: 22px;
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+
+    .preview {
+      margin-top: 32px;
+      border-radius: 22px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      background: rgba(0, 0, 0, 0.35);
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.45);
+    }
+
+    .preview img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    footer {
+      margin-top: 28px;
+      text-align: center;
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+
+    footer a {
+      color: var(--text);
+      text-decoration: none;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <section class="hero">
+      <div class="badge">
+        <span class="dot"></span>
+        <span id="version-badge">Latest Release · v2.6.54</span>
+      </div>
+      <h1>Unreleased Glass</h1>
+      <p class="subtitle">
+        Liquid Glass desktop music player for Juice WRLD's released &amp; unreleased catalog — synced lyrics, studio footage, 999 FM, and 60 fps Clip Studio.
+      </p>
+
+      <a id="primary-btn" class="primary-cta" href="https://github.com/GoodFight37/Unreleased-Glass-Releases/releases/download/v2.6.54/Unreleased-Glass-Setup-2.6.54.exe">
+        Download for Windows
+      </a>
+      <div id="primary-meta" class="primary-meta">Windows installer (.exe) · Auto-updates included</div>
+
+      <div class="platforms">
+        <a id="link-win" class="platform-card" href="https://github.com/GoodFight37/Unreleased-Glass-Releases/releases/download/v2.6.54/Unreleased-Glass-Setup-2.6.54.exe">
+          <span class="platform-name">Windows</span>
+          <span class="platform-sub">Installer (.exe)</span>
+        </a>
+        <a id="link-mac-arm" class="platform-card" href="https://github.com/GoodFight37/Unreleased-Glass-Releases/releases/download/v2.6.54/Unreleased-Glass-2.6.54-arm64.dmg">
+          <span class="platform-name">macOS (Apple Silicon)</span>
+          <span class="platform-sub">M1 / M2 / M3 / M4 (.dmg)</span>
+        </a>
+        <a id="link-mac-x64" class="platform-card" href="https://github.com/GoodFight37/Unreleased-Glass-Releases/releases/download/v2.6.54/Unreleased-Glass-2.6.54.dmg">
+          <span class="platform-name">macOS (Intel)</span>
+          <span class="platform-sub">Intel Mac (.dmg)</span>
+        </a>
+        <a id="link-linux" class="platform-card" href="https://github.com/GoodFight37/Unreleased-Glass-Releases/releases/download/v2.6.54/Unreleased-Glass-2.6.54.AppImage">
+          <span class="platform-name">Linux</span>
+          <span class="platform-sub">AppImage (x64)</span>
+        </a>
+      </div>
+
+      <p id="install-tip" class="tips">
+        Windows SmartScreen: click <strong>More info → Run anyway</strong> on first install.
+      </p>
+    </section>
+
+    <div class="preview">
+      <img src="screenshots/discover-dark.png" alt="Unreleased Glass — Discover" loading="lazy" />
+    </div>
+
+    <footer>
+      <a href="https://github.com/GoodFight37/Unreleased-Glass-Releases">View README &amp; Gallery</a>
+      &nbsp;·&nbsp;
+      <a href="https://github.com/GoodFight37/Unreleased-Glass-Releases/releases/latest">All Release Assets</a>
+    </footer>
+  </main>
+
+  <script>
+    (function () {
+      const REPO = 'GoodFight37/Unreleased-Glass-Releases';
+      const FALLBACK_TAG = 'v2.6.54';
+
+      function detectTarget() {
+        const ua = navigator.userAgent || '';
+        const plat = (navigator.platform || '').toLowerCase();
+        if (ua.includes('Windows') || plat.includes('win')) return 'win';
+        if (ua.includes('Mac') || plat.includes('mac')) {
+          try {
+            const canvas = document.createElement('canvas');
+            const gl = canvas.getContext('webgl');
+            const dbg = gl && gl.getExtension('WEBGL_debug_renderer_info');
+            const renderer = dbg ? String(gl.getParameter(dbg.UNMASKED_RENDERER_WEBGL) || '') : '';
+            if (/Apple M|Apple GPU/i.test(renderer)) return 'mac-arm';
+            if (/Intel|AMD|Radeon/i.test(renderer)) return 'mac-x64';
+          } catch {}
+          return 'mac-arm';
+        }
+        if (ua.includes('Linux') || plat.includes('linux')) return 'linux';
+        return 'win';
+      }
+
+      const META = {
+        win: {
+          label: 'Download for Windows',
+          sub: 'Windows installer (.exe) · Auto-updates included',
+          tip: 'Windows SmartScreen: click <strong>More info → Run anyway</strong> on first install.',
+          cardId: 'link-win',
+          filename: (v) => `Unreleased-Glass-Setup-${v}.exe`,
+        },
+        'mac-arm': {
+          label: 'Download for macOS (Apple Silicon)',
+          sub: 'M1 / M2 / M3 / M4 (.dmg)',
+          tip: 'First launch: open the .dmg, drag to Applications, then right-click → <strong>Open</strong> if macOS asks.',
+          cardId: 'link-mac-arm',
+          filename: (v) => `Unreleased-Glass-${v}-arm64.dmg`,
+        },
+        'mac-x64': {
+          label: 'Download for macOS (Intel)',
+          sub: 'Intel Mac (.dmg)',
+          tip: 'First launch: open the .dmg, drag to Applications, then right-click → <strong>Open</strong> if macOS asks.',
+          cardId: 'link-mac-x64',
+          filename: (v) => `Unreleased-Glass-${v}.dmg`,
+        },
+        linux: {
+          label: 'Download for Linux',
+          sub: 'AppImage (x64) · Auto-updates included',
+          tip: 'Linux: allow executing as program (<code>chmod +x</code>), then launch the AppImage.',
+          cardId: 'link-linux',
+          filename: (v) => `Unreleased-Glass-${v}.AppImage`,
+        },
+      };
+
+      const target = detectTarget();
+      const info = META[target];
+      const primaryBtn = document.getElementById('primary-btn');
+      const primaryMeta = document.getElementById('primary-meta');
+      const installTip = document.getElementById('install-tip');
+      const versionBadge = document.getElementById('version-badge');
+
+      function applyTag(tag) {
+        const ver = tag.replace(/^v/, '');
+        const base = `https://github.com/${REPO}/releases/download/${tag}`;
+        versionBadge.textContent = `Latest Release · ${tag}`;
+        document.getElementById('link-win').href = `${base}/${META.win.filename(ver)}`;
+        document.getElementById('link-mac-arm').href = `${base}/${META['mac-arm'].filename(ver)}`;
+        document.getElementById('link-mac-x64').href = `${base}/${META['mac-x64'].filename(ver)}`;
+        document.getElementById('link-linux').href = `${base}/${META.linux.filename(ver)}`;
+
+        primaryBtn.textContent = info.label;
+        primaryBtn.href = `${base}/${info.filename(ver)}`;
+        primaryMeta.textContent = info.sub;
+        installTip.innerHTML = info.tip;
+
+        for (const id of ['link-win', 'link-mac-arm', 'link-mac-x64', 'link-linux']) {
+          document.getElementById(id).classList.toggle('active', id === info.cardId);
+        }
+      }
+
+      applyTag(FALLBACK_TAG);
+
+      fetch(`https://api.github.com/repos/${REPO}/releases/latest`)
+        .then((r) => (r.ok ? r.json() : null))
+        .then((rel) => {
+          if (rel && typeof rel.tag_name === 'string' && /^v\d+\.\d+\.\d+/.test(rel.tag_name)) {
+            applyTag(rel.tag_name);
+          }
+        })
+        .catch(() => {});
+    })();
+  </script>
+</body>
+</html>

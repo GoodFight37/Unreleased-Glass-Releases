@@ -8,11 +8,11 @@
 
 ## Download & Install
 
-1. Go to the **[Latest Release page](https://github.com/GoodFight37/Unreleased-Glass-Releases/releases/latest)** and scroll down to **Assets**.
-2. Download the file for your computer:
-   - **Windows (`.exe`)** — Double-click the installer, then open **Unreleased Glass** from your Start menu. Future updates install automatically. *(If Windows SmartScreen pops up, click **More info → Run anyway**.)*
-   - **Mac (`.dmg`)** — Open the file and drag **Unreleased Glass** into **Applications**. *(On first launch, right-click the app → **Open** if macOS asks.)*
-   - **Linux (`.AppImage`)** — Right-click → **Properties → Allow executing file as program** (or `chmod +x`), then open it. Updates automatically.
+**[Open the Download Page (auto-detects your OS)](https://goodfight37.github.io/Unreleased-Glass-Releases/)** — or pick your installer directly from the **[Latest Release](https://github.com/GoodFight37/Unreleased-Glass-Releases/releases/latest)**:
+
+- **Windows (`.exe`)** — Double-click the installer, then open **Unreleased Glass** from your Start menu. Future updates install automatically. *(If Windows SmartScreen pops up, click **More info → Run anyway**.)*
+- **Mac Apple Silicon M1–M4 (`-arm64.dmg`)** / **Mac Intel (`.dmg`)** — Open the file and drag **Unreleased Glass** into **Applications**. *(On first launch, right-click the app → **Open** if macOS asks.)*
+- **Linux (`.AppImage`)** — Right-click → **Properties → Allow executing file as program** (or `chmod +x`), then open it. Updates automatically.
 
 > Your existing profile stays safe and separate. If you used the original Unreleased app before, close it once before launching Unreleased Glass so your playlists and settings can be imported automatically.
 
