@@ -1,52 +1,67 @@
 # Unreleased Glass
 
-A desktop music player for exploring Juice WRLD's released and unreleased catalogue, organizing your music and listening with fullscreen lyrics.
+**A next-generation desktop Juice WRLD player** — built with Electron, React, TypeScript, and a custom **WebGPU Liquid Glass** compositor. Explore the full released & unreleased catalogue, watch studio footage, listen on a full-bleed lyrics stage, and export 60 fps clips directly from the app.
 
-Built from [Unreleased](https://github.com/Juice-WRLD-API/Unreleased), with a cover-led interface, glass controls and a simpler everyday layout.
+![Unreleased Glass — Discover & Liquid Glass](docs/screenshots/discover-dark.png)
 
-![Unreleased Glass](docs/screenshots/app-home-a33ab2bc.png)
+---
 
-## What you can do
+## Highlights
 
-- **Discover more music.** Explore Juice WRLD's eras, unreleased tracks, studio recordings and alternate versions through their cover art.
-- **Find the version you want.** Search the catalogue, compare versions and open a song's credits, notes and related footage.
-- **Keep your music together.** Use playlists, liked songs, albums and local files, with offline downloads for listening without a connection.
-- **Listen with lyrics.** Open WRLD for fullscreen artwork and synchronized lyrics. Choose a lyric presentation or hide the controls for a cleaner listening screen.
-- **Tune in to 999 FM.** Listen to the live station and join its chat. Resuming the radio brings you back to the live broadcast.
-- **Choose your look.** Switch between Light, Dark and album themes. You can also let the app's colors follow the playing cover, or use Game & economy mode for a calmer background.
+- **WebGPU Liquid Glass Compositor** — Real-time multi-layer optical refraction, half-resolution backdrop blur, adaptive cover-driven color palettes, and WCAG AA contrast across **Light**, **Dark**, and **5 album themes** (*999*, *GB&GR*, *DRFL*, *LND*, *FD*), with automatic SVG fallback when WebGPU is unavailable.
+- **Cover-Led Discover & Vault Smart DJ** — Chronological Juice WRLD eras, *This Week in History*, studio-session hero previews, and one-click **Vault Smart DJ** mixes (*Late Night GBGR*, *Nick Mira*, *Greece 2019*, *Harmonic Flow* key/BPM-matched transitions).
+- **WRLD Fullscreen Stage & Lyric Engines** — Fullscreen artwork + synchronized lyrics with multiple presentation styles (*Classic*, *Focus*, *Editorial* phrase chunking, *Cut*, *Cinema*, *Fisheye*), live audio-reactive 808 edge rims, and the **Stage Bouncer** (album-cover / butterfly physics synced to lyric cues and theme palettes).
+- **Clip Studio (60 fps MP4 Export)** — Built-in CapCut-style timeline with **In → Out** trimming, chorus snap markers, **Classic** (WRLD stage) and **Edit** (video footage + OFL lyric styles) presets, **9:16**, **16:9**, **4:3** & **1:1** formats, and deterministic 60 fps hardware-accelerated (`h264_nvenc` / `libx264`) MP4 export.
+- **Desktop Widgets & Edge Light** — Clear-desk desktop lyrics widgets (*Cut*, *Karaoke*, etc.), audio-reactive screen edge lighting, mini-player / pop-out windows, Discord Rich Presence, and Windows taskbar media controls.
+- **Full Archive, Offline Vault & 999 FM** — Search every song, version group, studio session, and photo/video archive; download tracks & playlists for offline playback (including automatic ALAC-to-FLAC transcoding); tune in to **999 FM** live radio with chat; play **Heardle**; or open the built-in **Terminal** and **10-band EQ + FX** chain.
 
-Catalogue information and available audio come from the [Juice WRLD API](https://juicewrldapi.com). Some catalogue entries have information but no playable audio.
+---
 
-## What's different in Glass?
+## Gallery
 
-Discover, Catalogue and Collection put everyday listening first: larger covers, eras in chronological order, direct playback and fewer technical controls on screen. The original app's advanced tools remain available through Developer options.
+### Catalogue & Album Themes
+![Catalogue — Death Race for Love Theme](docs/screenshots/catalogue-drfl.png)
 
-Footage shows a real frame from each video, loaded as you scroll, with a plain "View song" action when a video clearly belongs to a catalogue song. Every list can be expanded, so the whole archive is reachable.
+### WRLD Listening Stage
+![WRLD Fullscreen Stage](docs/screenshots/wrld-stage.png)
 
-The interface adds translucent glass controls and cover-inspired backgrounds. WRLD brings artwork and lyrics into one listening view, with clear ways to return to your music or change the atmosphere.
+### Clip Studio — 60 fps Export
+![Clip Studio](docs/screenshots/clip-studio.png)
 
-WRLD's lyric menu also offers Cut, a cut-up type style where each word lights as it is sung, in dark and light themes.
+---
 
 ## Installation
 
-Open [Releases](https://github.com/GoodFight37/Unreleased-Glass-Releases/releases) and download the file for your system:
+Open [Releases](https://github.com/GoodFight37/Unreleased-Glass-Releases/releases) and download the installer for your system:
 
-- **Windows:** the `.exe` installer. Run it, then open **Unreleased Glass** from the Start menu. Installed versions update themselves.
-- **Linux:** the `.AppImage`. Make it executable (`chmod +x`) and run it. The AppImage also updates itself.
-- **macOS:** the `.dmg` (Apple silicon and Intel). The app is not code-signed, so macOS may ask you to confirm the first launch. Updates are manual: download the new `.dmg` and replace the app.
+- **Windows:** `.exe` installer — run it, then launch **Unreleased Glass** from the Start menu (supports automatic background updates).
+- **Linux:** `.AppImage` — mark executable (`chmod +x`) and run (supports automatic updates).
+- **macOS:** `.dmg` (Apple silicon & Intel) — unsigned build; confirm first launch in macOS Security settings if prompted.
 
-Windows is the platform that is used and tested the most. Linux builds are tested in CI; macOS builds are produced by CI but have not been checked on a real Mac.
+Installed versions use an isolated Unreleased Glass profile and check `GoodFight37/Unreleased-Glass-Releases` for updates. Catalogue metadata and available streams come from the [Juice WRLD API](https://juicewrldapi.com).
 
-Installed versions check this repository for updates (its releases hold the installers and update manifests). Glass uses its own profile and keeps the original Unreleased installation separate. Before the first launch, close the original player so Glass can import its preferences. Imported offline files are copied, which can require extra disk space.
+---
 
-![Unreleased Glass](docs/screenshots/app-catalogue-a33ab2bc.png)
+## For Developers
 
-## About this repository
+Active branch: `app`. Requires **Node.js 22** and `npm`:
 
-This repository only hosts what Unreleased Glass ships: the installers, the update manifests (`latest*.yml`) and the synchronized-lyrics pack that the app downloads. The application's source code is kept in a private repository.
+```bash
+npm ci
+npm run build
+npm run electron:dev
+```
 
-## Credits and license
+Build a local installer (`release/`):
 
-- Catalogue information, archive files and the API: the [Juice WRLD API](https://juicewrldapi.com) and its maintainers.
-- The original player: [Unreleased](https://github.com/Juice-WRLD-API/Unreleased) by the Unreleased team. Unreleased Glass is built from it.
-- Unreleased Glass keeps the original [MIT license](LICENSE), Copyright (c) 2026 leanwrldd. Bundled third-party licenses are listed in [THIRD-PARTY-NOTICES.md](THIRD-PARTY-NOTICES.md).
+```bash
+npm run electron:build -- --win --publish never
+npm run electron:build -- --linux --publish never
+npm run electron:build -- --mac --publish never
+```
+
+See [docs/RELEASING.md](docs/RELEASING.md), [docs/VALIDATION.md](docs/VALIDATION.md), and [AGENTS.md](AGENTS.md) for architecture, release workflows, and verification commands.
+
+## Credits & License
+
+Built on top of [Juice-WRLD-API/Unreleased](https://github.com/Juice-WRLD-API/Unreleased). See [LICENSE](LICENSE) for details.
