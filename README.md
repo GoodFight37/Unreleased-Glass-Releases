@@ -74,7 +74,7 @@ The installer is not signed with a paid certificate (it costs hundreds of dollar
 1. Click **More info**.
 2. Click **Run anyway**.
 
-You only do this once. Want to be sure the file is the one published here? Compare its SHA-256 with the value in the release notes (each release from 2.7.1 on lists them). In PowerShell:
+You only do this once. Want to be sure the file is the one published here? Compare its SHA-256 with the value in the release notes (every release lists them). In PowerShell:
 
 ```powershell
 Get-FileHash .\Unreleased-Glass-Setup-<version>.exe -Algorithm SHA256
