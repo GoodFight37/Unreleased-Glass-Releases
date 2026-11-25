@@ -193,44 +193,44 @@
     <section class="hero">
       <div class="badge">
         <span class="dot"></span>
-        <span id="version-badge">Latest Release · v2.6.54</span>
+        <span id="version-badge">Latest Release · v2.7.0</span>
       </div>
       <h1>Unreleased Glass</h1>
       <p class="subtitle">
         Liquid Glass desktop music player for Juice WRLD's released &amp; unreleased catalog — synced lyrics, studio footage, 999 FM, and 60 fps Clip Studio.
       </p>
 
-      <a id="primary-btn" class="primary-cta" href="https://github.com/GoodFight37/Unreleased-Glass-Releases/releases/download/v2.6.54/Unreleased-Glass-Setup-2.6.54.exe">
+      <a id="primary-btn" class="primary-cta" href="https://github.com/GoodFight37/Unreleased-Glass-Releases/releases/download/v2.7.0/Unreleased-Glass-Setup-2.7.0.exe">
         Download for Windows
       </a>
       <div id="primary-meta" class="primary-meta">Windows installer (.exe) · Auto-updates included</div>
 
       <div class="platforms">
-        <a id="link-win" class="platform-card" href="https://github.com/GoodFight37/Unreleased-Glass-Releases/releases/download/v2.6.54/Unreleased-Glass-Setup-2.6.54.exe">
+        <a id="link-win" class="platform-card" href="https://github.com/GoodFight37/Unreleased-Glass-Releases/releases/download/v2.7.0/Unreleased-Glass-Setup-2.7.0.exe">
           <span class="platform-name">Windows</span>
           <span class="platform-sub">Installer (.exe)</span>
         </a>
-        <a id="link-mac-arm" class="platform-card" href="https://github.com/GoodFight37/Unreleased-Glass-Releases/releases/download/v2.6.54/Unreleased-Glass-2.6.54-arm64.dmg">
+        <a id="link-mac-arm" class="platform-card" href="https://github.com/GoodFight37/Unreleased-Glass-Releases/releases/download/v2.7.0/Unreleased-Glass-2.7.0-arm64.dmg">
           <span class="platform-name">macOS (Apple Silicon)</span>
           <span class="platform-sub">M1 / M2 / M3 / M4 (.dmg)</span>
         </a>
-        <a id="link-mac-x64" class="platform-card" href="https://github.com/GoodFight37/Unreleased-Glass-Releases/releases/download/v2.6.54/Unreleased-Glass-2.6.54.dmg">
+        <a id="link-mac-x64" class="platform-card" href="https://github.com/GoodFight37/Unreleased-Glass-Releases/releases/download/v2.7.0/Unreleased-Glass-2.7.0.dmg">
           <span class="platform-name">macOS (Intel)</span>
           <span class="platform-sub">Intel Mac (.dmg)</span>
         </a>
-        <a id="link-linux" class="platform-card" href="https://github.com/GoodFight37/Unreleased-Glass-Releases/releases/download/v2.6.54/Unreleased-Glass-2.6.54.AppImage">
+        <a id="link-linux" class="platform-card" href="https://github.com/GoodFight37/Unreleased-Glass-Releases/releases/download/v2.7.0/Unreleased-Glass-2.7.0.AppImage">
           <span class="platform-name">Linux</span>
           <span class="platform-sub">AppImage (x64)</span>
         </a>
       </div>
 
       <p id="install-tip" class="tips">
-        Windows SmartScreen: click <strong>More info → Run anyway</strong> on first install.
+        Windows may show <strong>"Windows protected your PC"</strong> (the installer is free and unsigned): click <strong>More info → Run anyway</strong>. To check the file, compare <code>Get-FileHash .\file.exe -Algorithm SHA256</code> with the SHA-256 in the release notes (listed from 2.7.1).
       </p>
     </section>
 
     <div class="preview">
-      <img src="screenshots/discover-dark.png" alt="Unreleased Glass — Discover" loading="lazy" />
+      <img src="screenshots/hero.webp" alt="Unreleased Glass — Discover" loading="lazy" />
     </div>
 
     <footer>
@@ -243,7 +243,7 @@
   <script>
     (function () {
       const REPO = 'GoodFight37/Unreleased-Glass-Releases';
-      const FALLBACK_TAG = 'v2.6.54';
+      const FALLBACK_TAG = 'v2.7.0';
 
       function detectTarget() {
         const ua = navigator.userAgent || '';
@@ -268,7 +268,7 @@
         win: {
           label: 'Download for Windows',
           sub: 'Windows installer (.exe) · Auto-updates included',
-          tip: 'Windows SmartScreen: click <strong>More info → Run anyway</strong> on first install.',
+          tip: 'Windows may show <strong>"Windows protected your PC"</strong> (the installer is free and unsigned): click <strong>More info → Run anyway</strong>. To check the file, compare <code>Get-FileHash .\\file.exe -Algorithm SHA256</code> with the SHA-256 in the release notes (listed from 2.7.1).',
           cardId: 'link-win',
           filename: (v) => `Unreleased-Glass-Setup-${v}.exe`,
         },

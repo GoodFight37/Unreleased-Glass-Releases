@@ -1,47 +1,91 @@
+<div align="center">
+
 # Unreleased Glass
 
-**A sleek desktop music player for Juice WRLD's released and unreleased music** — featuring translucent Liquid Glass visuals, album-inspired themes, fullscreen synced lyrics, studio footage, and a built-in 60 fps video clip exporter.
+**The desktop player for Juice WRLD's unreleased music.**<br>
+Studio sessions, alternate versions and raw footage, wrapped in a Liquid Glass interface.
 
-![Unreleased Glass — Discover](docs/screenshots/discover-dark.png)
+[![Latest release](https://img.shields.io/github/v/release/GoodFight37/Unreleased-Glass-Releases?style=for-the-badge&color=ef4444&label=latest)](https://github.com/GoodFight37/Unreleased-Glass-Releases/releases/latest)
+[![Downloads](https://img.shields.io/github/downloads/GoodFight37/Unreleased-Glass-Releases/total?style=for-the-badge&color=f59e0b)](https://github.com/GoodFight37/Unreleased-Glass-Releases/releases)
+![Platforms](https://img.shields.io/badge/Windows%20%C2%B7%20macOS%20%C2%B7%20Linux-1f1f23?style=for-the-badge)
 
----
+### [⬇ Download for your system](https://goodfight37.github.io/Unreleased-Glass-Releases/)
 
-## Download & Install
+<sub>Free · Auto-updates on Windows and Linux · Detects your OS</sub>
 
-**[Open the Download Page (auto-detects your OS)](https://goodfight37.github.io/Unreleased-Glass-Releases/)** — or pick your installer directly from the **[Latest Release](https://github.com/GoodFight37/Unreleased-Glass-Releases/releases/latest)**:
+<br>
 
-- **Windows (`.exe`)** — Double-click the installer, then open **Unreleased Glass** from your Start menu. Future updates install automatically. *(If Windows SmartScreen pops up, click **More info → Run anyway**.)*
-- **Mac Apple Silicon M1–M4 (`-arm64.dmg`)** / **Mac Intel (`.dmg`)** — Open the file and drag **Unreleased Glass** into **Applications**. *(On first launch, right-click the app → **Open** if macOS asks.)*
-- **Linux (`.AppImage`)** — Right-click → **Properties → Allow executing file as program** (or `chmod +x`), then open it. Updates automatically.
+<img src="docs/screenshots/hero.webp" alt="Unreleased Glass home screen: studio footage, smart mixes and the current session" width="900">
 
-> Your existing profile stays safe and separate. If you used the original Unreleased app before, close it once before launching Unreleased Glass so your playlists and settings can be imported automatically.
-
----
-
-## Why You'll Love It
-
-- **Liquid Glass & Album Themes** — Translucent glass controls and glowing backgrounds that adapt to whatever cover is playing, plus **Dark**, **Light**, and **5 Juice WRLD album themes** (*999*, *Goodbye & Good Riddance*, *Death Race for Love*, *Legends Never Die*, *Fighting Demons*).
-- **Discover & Smart Mixes** — Browse eras in chronological order, preview real studio-session footage right on the home screen, and start one-click mixes (*Late Night GBGR*, *Nick Mira*, *Greece 2019*, *Harmonic Flow*).
-- **Fullscreen Lyrics & Bouncing Cover** — Multiple lyric styles, beat-reactive glowing edges, and a DVD-style bouncing album cover that switches themes on corner hits.
-- **Clip Studio (Export for TikTok, Reels & Shorts)** — Trim any part of a song on a visual timeline, pick **Classic** (bouncing cover + lyrics) or **Edit** (studio footage + lyrics), and export a crisp **60 fps MP4** ready to post.
-- **Desktop Lyrics & Screen Glow** — Float synced lyrics directly over your desktop and light up your screen edges to the beat.
-- **Offline Listening, 999 FM & Heardle** — Download songs and playlists for offline playback, listen to **999 FM** live radio with chat, or play **Heardle** to guess the track.
+</div>
 
 ---
 
-## Gallery
+## What you get
 
-### Catalogue & Album Themes
-![Catalogue — Death Race for Love Theme](docs/screenshots/catalogue-drfl.png)
+### Beyond the albums
+Open **Discover** and land in the vault: studio-session footage that plays silently as you hover, one-click mixes (*Late Night GBGR*, *Nick Mira*, *Greece 2019*, *Harmonic Flow*) and an **On this day** shelf that tells you what was previewed years ago. The catalogue lets you compare every version of a song.
 
-### Fullscreen Lyrics Stage
-![WRLD Fullscreen Stage](docs/screenshots/wrld-stage.png)
+### Lyrics that fill the screen
+Synced lyrics, big and in time, over a glowing backdrop that follows the cover.
 
-### Clip Studio — 60 fps Video Export
-![Clip Studio](docs/screenshots/clip-studio.png)
+<img src="docs/screenshots/lyrics.webp" alt="Fullscreen synced lyrics with the cover art" width="900">
+
+### Make a clip in seconds
+Pick the part of a song on a visual timeline, choose **Classic** (bouncing album cover and lyrics) or **Edit** (studio footage and lyrics), and export a **60 fps MP4** in 9:16, 1:1, 4:3 or 16:9, ready for TikTok, Reels and Shorts.
+
+<div align="center">
+<img src="docs/screenshots/clip-studio.webp" alt="A 9:16 clip with word-by-word lyrics over studio footage" width="320">
+</div>
+
+### Make it yours
+**Dark**, **Light** and five album themes: *999*, *Goodbye & Good Riddance*, *Death Race for Love*, *Legends Never Die* and *Fighting Demons*. Five clear settings pages, no maze.
+
+<img src="docs/screenshots/themes.webp" alt="Settings: appearance and the seven themes" width="900">
+
+### And more
+- **Offline listening**: download songs and playlists.
+- **Your own files**: add folders from your computer.
+- **999 FM** live radio and **Heardle** to guess the track.
+- **Desktop widgets**: floating lyrics and a soft light around your screen edges.
 
 ---
 
-## Credits & License
+## Install
 
-Music metadata and streams are provided by the [Juice WRLD API](https://juicewrldapi.com). Built on top of [Juice-WRLD-API/Unreleased](https://github.com/Juice-WRLD-API/Unreleased). See [LICENSE](LICENSE) for details.
+Pick your system on the **[download page](https://goodfight37.github.io/Unreleased-Glass-Releases/)** (it detects it for you), or take the file from the **[latest release](https://github.com/GoodFight37/Unreleased-Glass-Releases/releases/latest)**.
+
+| System | File | First launch |
+|---|---|---|
+| **Windows** | `.exe` installer | Double-click, then open **Unreleased Glass** from the Start menu. Updates install themselves. |
+| **macOS** Apple Silicon (M1–M4) | `-arm64.dmg` | Open it, drag the app into **Applications**. If macOS refuses, right-click the app → **Open**. |
+| **macOS** Intel | `.dmg` | Same as above. |
+| **Linux** | `.AppImage` | Right-click → **Properties → Allow executing as program** (or `chmod +x`), then open it. |
+
+> Already used the original Unreleased app? Close it once before the first launch so your playlists and settings can be imported. Your profile stays separate and safe.
+
+<details>
+<summary><b>Windows says "Windows protected your PC"?</b></summary>
+
+<br>
+
+The installer is not signed with a paid certificate (it costs hundreds of dollars a year, and this project is free). So Windows SmartScreen asks for confirmation the first time:
+
+1. Click **More info**.
+2. Click **Run anyway**.
+
+You only do this once. Want to be sure the file is the one published here? Compare its SHA-256 with the value in the release notes (each release from 2.7.1 on lists them). In PowerShell:
+
+```powershell
+Get-FileHash .\Unreleased-Glass-Setup-<version>.exe -Algorithm SHA256
+```
+
+The two values must match exactly. If they don't, don't run the file and open an [issue](https://github.com/GoodFight37/Unreleased-Glass-Releases/issues).
+
+</details>
+
+---
+
+## Credits & license
+
+Music metadata and streams come from the [Juice WRLD API](https://juicewrldapi.com). Built on top of [Juice-WRLD-API/Unreleased](https://github.com/Juice-WRLD-API/Unreleased). See [LICENSE](LICENSE) and [THIRD-PARTY-NOTICES.md](THIRD-PARTY-NOTICES.md).
