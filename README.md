@@ -2,8 +2,8 @@
 
 # Unreleased Glass
 
-**The desktop player for Juice WRLD's released and unreleased music.**<br>
-Studio sessions, alternate versions, and raw footage — powered by a real-time WebGPU Liquid Glass engine.
+**A clean, focused desktop player for Juice WRLD's released and unreleased music.**<br>
+Built on top of the original Unreleased app — simplified, polished, and designed around the listening experience.
 
 [![Latest release](https://img.shields.io/github/v/release/GoodFight37/Unreleased-Glass-Releases?style=for-the-badge&color=ef4444&label=latest)](https://github.com/GoodFight37/Unreleased-Glass-Releases/releases/latest)
 [![Downloads](https://img.shields.io/github/downloads/GoodFight37/Unreleased-Glass-Releases/total?style=for-the-badge&color=f59e0b)](https://github.com/GoodFight37/Unreleased-Glass-Releases/releases)
@@ -21,33 +21,34 @@ Studio sessions, alternate versions, and raw footage — powered by a real-time 
 
 ---
 
-## Why Unreleased Glass?
+## What's improved in Unreleased Glass
 
-Built on top of [Juice-WRLD-API/Unreleased](https://github.com/Juice-WRLD-API/Unreleased), Unreleased Glass keeps the catalogue, 999 FM, Heardle, playlists, and account sync intact while upgrading visuals, fullscreen lyrics, desktop integration, reliability, and security.
+Unreleased Glass builds on the great foundation of [Juice-WRLD-API/Unreleased](https://github.com/Juice-WRLD-API/Unreleased) and the [Juice WRLD API](https://juicewrldapi.com). Our goal is simple: remove the clutter, fix everyday bugs, and make listening feel smooth, safe, and effortless.
 
-| Area | Original Unreleased | Unreleased Glass |
-|---|---|---|
-| **Visuals & Themes** | Standard flat dark/light UI | Real-time **WebGPU Liquid Glass** compositor (optical refraction, beveled rims, half-res blur at 60–100 fps), adaptive cover-color palettes, plus **Dark**, **Light**, and **5 Juice WRLD album themes** (*999*, *GB&GR*, *DRFL*, *LND*, *Fighting Demons*) |
-| **Fullscreen Stage (WRLD)** | Basic lyrics view | **8 beat-reactive visualizers** refracted live through the glass, synced & word-by-word LRC lyrics, floating glass cover carousel, beat-reactive **Edge Light**, and **StageBouncer** (*Album Covers*, *Album Clash*, *LND Butterfly*) |
-| **Desktop Integration** | Standard app window | **Windows desktop widgets** (crisp Clock, Player, Queue), floating desktop lyrics, **Clear Desk** mode, global media keys, system tray, and live **Discord Rich Presence** |
-| **Clip Studio (60 fps)** | — | Built-in timeline trimmer (0.01 s precision), **Classic** (bouncing cover + lyrics) and **Edit** (studio footage + lyrics) presets, hardware-accelerated **60 fps MP4** export (NVENC / x264) for TikTok, Reels & Shorts |
-| **Search, Audio & Resilience** | Basic search & streaming | Instant **fuzzy `Ctrl+K` command & catalogue search**, atomic offline library storage, transparent **ALAC → FLAC** decoding, resilient cache fallback, and a clear status banner if the API goes down |
-| **Security & Updates** | Upstream channel | Hardened Electron IPC & navigation guards, strict **SHA-256 verification** for helper binaries (FFmpeg / yt-dlp), zero embedded tokens, SHA-256 verifiable installers, and silent SHA-512 background auto-updates |
+| Focus | What it means for you |
+|---|---|
+| **Less clutter, more music** | Unused menus and extra toggles were stripped out so Settings stays clean (5 clear pages) and every screen is easy to navigate. |
+| **Liquid Glass & album themes** | Soft translucent glass controls that adapt to the cover art you're playing, plus **Dark**, **Light**, and **5 Juice WRLD album themes** (*999*, *GB&GR*, *DRFL*, *LND*, *Fighting Demons*). |
+| **Fullscreen lyrics & visuals (WRLD)** | Big, accurate synced lyrics over live visualizers, a floating glass cover carousel, screen edge lights, and bouncing album covers. |
+| **Built-in 60 fps Clip Studio** | Pick any moment of a track, choose bouncing cover art or studio footage with word-by-word lyrics, and export a crisp 60 fps MP4 for TikTok, Reels, or Shorts. |
+| **Faster & fewer bugs** | Instant **`Ctrl+K`** search that still finds songs even with typos, smooth scrolling across thousands of tracks, reliable offline playback (including lossless files), and a clear notice if the server is temporarily down. |
+| **Desktop-first comfort** | Native desktop widgets (crisp clock, mini player, up-next queue), floating desktop lyrics, global media keys, tray controls, and Discord Rich Presence. |
+| **Built with safety in mind** | Verified downloads (SHA-256), quiet background updates, automatic integrity checks for helper tools, and a separate profile so your original Unreleased setup is never overwritten. |
 
 ---
 
 ## What you get
 
 ### Beyond the albums
-Open **Discover** and land in the vault: studio-session footage that plays silently as you hover, one-click mixes (*Late Night GBGR*, *Nick Mira*, *Greece 2019*, *Harmonic Flow*) and an **On this day** shelf that tells you what was previewed years ago. The catalogue lets you compare every version of a song, and **`Ctrl+K`** finds tracks, eras, or commands instantly even with typos.
+Open **Discover** and land straight in the vault: studio-session footage that plays silently as you hover, one-click mixes (*Late Night GBGR*, *Nick Mira*, *Greece 2019*, *Harmonic Flow*) and an **On this day** shelf showing what was previewed years ago. Compare every version of a song in the catalogue, or press **`Ctrl+K`** to jump to any track, era, or action in a second.
 
 ### Lyrics that fill the screen
-Synced lyrics, big and in time, over a glowing backdrop and live visualizers that refract right through the glass.
+Synced lyrics, big and in time, over a glowing backdrop and live visualizers that shine right through the glass.
 
 <img src="docs/screenshots/lyrics.webp" alt="Fullscreen synced lyrics with the cover art" width="900">
 
 ### Make a clip in seconds
-Pick the part of a song on a visual timeline, choose **Classic** (bouncing album cover and lyrics) or **Edit** (studio footage and lyrics), and export a **60 fps MP4** in 9:16, 1:1, 4:3 or 16:9, ready for TikTok, Reels and Shorts.
+Pick the part of a song on a visual timeline, choose **Classic** (bouncing album cover and lyrics) or **Edit** (studio footage and lyrics), and export a **60 fps MP4** in 9:16, 1:1, 4:3 or 16:9, ready to post.
 
 <div align="center">
 <img src="docs/screenshots/clip-studio.webp" alt="A 9:16 clip with word-by-word lyrics over studio footage" width="320">
@@ -59,17 +60,17 @@ Pick the part of a song on a visual timeline, choose **Classic** (bouncing album
 <img src="docs/screenshots/themes.webp" alt="Settings: appearance and the seven themes" width="900">
 
 ### And more
-- **Offline listening**: download songs and playlists with atomic local storage and transparent ALAC → FLAC playback.
-- **Your own files**: add folders from your computer.
+- **Offline listening**: download songs and playlists so your music stays ready even without internet.
+- **Your own files**: add local folders straight from your computer.
 - **999 FM** live radio and **Heardle** to guess the track.
-- **Desktop widgets**: crisp clock, player, queue, floating lyrics, and beat-reactive screen edge light.
-- **Built for smoothness**: windowed multi-thousand-track lists, 60–100 fps stability, `prefers-reduced-motion`, and Economy / Game mode.
+- **Desktop widgets**: crisp clock, player, queue, floating lyrics, and soft light around your screen edges.
+- **Smooth on every setup**: respects reduced-motion preferences and includes an Economy / Game mode when you want to save power.
 
 ---
 
 ## Install
 
-Pick your system on the **[download page](https://goodfight37.github.io/Unreleased-Glass-Releases/)** (it detects it for you), or take the file from the **[latest release](https://github.com/GoodFight37/Unreleased-Glass-Releases/releases/latest)**.
+Pick your system on the **[download page](https://goodfight37.github.io/Unreleased-Glass-Releases/)** (it detects it for you), or grab the file from the **[latest release](https://github.com/GoodFight37/Unreleased-Glass-Releases/releases/latest)**.
 
 | System | File | First launch |
 |---|---|---|
@@ -78,7 +79,7 @@ Pick your system on the **[download page](https://goodfight37.github.io/Unreleas
 | **macOS** Intel | `.dmg` | Same as above. |
 | **Linux** | `.AppImage` | Right-click → **Properties → Allow executing as program** (or `chmod +x`), then open it. |
 
-> Already used the original Unreleased app? Close it once before the first launch so your playlists and settings can be imported. Your profile stays separate and safe.
+> Already used the original Unreleased app? Close it once before the first launch so your playlists and settings can be imported automatically. Your original profile stays completely separate and safe.
 
 <details>
 <summary><b>Windows says "Windows protected your PC"?</b></summary>
@@ -90,7 +91,7 @@ The installer is not signed with a paid certificate (it costs hundreds of dollar
 1. Click **More info**.
 2. Click **Run anyway**.
 
-You only do this once. Want to be sure the file is the one published here? Compare its SHA-256 with the value in the release notes (every release lists them). In PowerShell:
+You only do this once. Want to be sure the file is the exact one published here? Compare its SHA-256 with the value in the release notes (every release lists them). In PowerShell:
 
 ```powershell
 Get-FileHash .\Unreleased-Glass-Setup-<version>.exe -Algorithm SHA256
@@ -104,4 +105,4 @@ The two values must match exactly. If they don't, don't run the file and open an
 
 ## Credits & license
 
-Music metadata and streams come from the [Juice WRLD API](https://juicewrldapi.com). Built on top of [Juice-WRLD-API/Unreleased](https://github.com/Juice-WRLD-API/Unreleased). See [LICENSE](LICENSE) and [THIRD-PARTY-NOTICES.md](THIRD-PARTY-NOTICES.md).
+Music metadata and streams come from the [Juice WRLD API](https://juicewrldapi.com). Built with appreciation on top of [Juice-WRLD-API/Unreleased](https://github.com/Juice-WRLD-API/Unreleased). See [LICENSE](LICENSE) and [THIRD-PARTY-NOTICES.md](THIRD-PARTY-NOTICES.md).
