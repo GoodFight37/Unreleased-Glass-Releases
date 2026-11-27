@@ -2,8 +2,8 @@
 
 # Unreleased Glass
 
-**The desktop player for Juice WRLD's unreleased music.**<br>
-Studio sessions, alternate versions and raw footage, wrapped in a Liquid Glass interface.
+**The desktop player for Juice WRLD's released and unreleased music.**<br>
+Studio sessions, alternate versions, and raw footage — powered by a real-time WebGPU Liquid Glass engine.
 
 [![Latest release](https://img.shields.io/github/v/release/GoodFight37/Unreleased-Glass-Releases?style=for-the-badge&color=ef4444&label=latest)](https://github.com/GoodFight37/Unreleased-Glass-Releases/releases/latest)
 [![Downloads](https://img.shields.io/github/downloads/GoodFight37/Unreleased-Glass-Releases/total?style=for-the-badge&color=f59e0b)](https://github.com/GoodFight37/Unreleased-Glass-Releases/releases)
@@ -21,13 +21,28 @@ Studio sessions, alternate versions and raw footage, wrapped in a Liquid Glass i
 
 ---
 
+## Why Unreleased Glass?
+
+Built on top of [Juice-WRLD-API/Unreleased](https://github.com/Juice-WRLD-API/Unreleased), Unreleased Glass keeps the catalogue, 999 FM, Heardle, playlists, and account sync intact while upgrading visuals, fullscreen lyrics, desktop integration, reliability, and security.
+
+| Area | Original Unreleased | Unreleased Glass |
+|---|---|---|
+| **Visuals & Themes** | Standard flat dark/light UI | Real-time **WebGPU Liquid Glass** compositor (optical refraction, beveled rims, half-res blur at 60–100 fps), adaptive cover-color palettes, plus **Dark**, **Light**, and **5 Juice WRLD album themes** (*999*, *GB&GR*, *DRFL*, *LND*, *Fighting Demons*) |
+| **Fullscreen Stage (WRLD)** | Basic lyrics view | **8 beat-reactive visualizers** refracted live through the glass, synced & word-by-word LRC lyrics, floating glass cover carousel, beat-reactive **Edge Light**, and **StageBouncer** (*Album Covers*, *Album Clash*, *LND Butterfly*) |
+| **Desktop Integration** | Standard app window | **Windows desktop widgets** (crisp Clock, Player, Queue), floating desktop lyrics, **Clear Desk** mode, global media keys, system tray, and live **Discord Rich Presence** |
+| **Clip Studio (60 fps)** | — | Built-in timeline trimmer (0.01 s precision), **Classic** (bouncing cover + lyrics) and **Edit** (studio footage + lyrics) presets, hardware-accelerated **60 fps MP4** export (NVENC / x264) for TikTok, Reels & Shorts |
+| **Search, Audio & Resilience** | Basic search & streaming | Instant **fuzzy `Ctrl+K` command & catalogue search**, atomic offline library storage, transparent **ALAC → FLAC** decoding, resilient cache fallback, and a clear status banner if the API goes down |
+| **Security & Updates** | Upstream channel | Hardened Electron IPC & navigation guards, strict **SHA-256 verification** for helper binaries (FFmpeg / yt-dlp), zero embedded tokens, SHA-256 verifiable installers, and silent SHA-512 background auto-updates |
+
+---
+
 ## What you get
 
 ### Beyond the albums
-Open **Discover** and land in the vault: studio-session footage that plays silently as you hover, one-click mixes (*Late Night GBGR*, *Nick Mira*, *Greece 2019*, *Harmonic Flow*) and an **On this day** shelf that tells you what was previewed years ago. The catalogue lets you compare every version of a song.
+Open **Discover** and land in the vault: studio-session footage that plays silently as you hover, one-click mixes (*Late Night GBGR*, *Nick Mira*, *Greece 2019*, *Harmonic Flow*) and an **On this day** shelf that tells you what was previewed years ago. The catalogue lets you compare every version of a song, and **`Ctrl+K`** finds tracks, eras, or commands instantly even with typos.
 
 ### Lyrics that fill the screen
-Synced lyrics, big and in time, over a glowing backdrop that follows the cover.
+Synced lyrics, big and in time, over a glowing backdrop and live visualizers that refract right through the glass.
 
 <img src="docs/screenshots/lyrics.webp" alt="Fullscreen synced lyrics with the cover art" width="900">
 
@@ -44,10 +59,11 @@ Pick the part of a song on a visual timeline, choose **Classic** (bouncing album
 <img src="docs/screenshots/themes.webp" alt="Settings: appearance and the seven themes" width="900">
 
 ### And more
-- **Offline listening**: download songs and playlists.
+- **Offline listening**: download songs and playlists with atomic local storage and transparent ALAC → FLAC playback.
 - **Your own files**: add folders from your computer.
 - **999 FM** live radio and **Heardle** to guess the track.
-- **Desktop widgets**: floating lyrics and a soft light around your screen edges.
+- **Desktop widgets**: crisp clock, player, queue, floating lyrics, and beat-reactive screen edge light.
+- **Built for smoothness**: windowed multi-thousand-track lists, 60–100 fps stability, `prefers-reduced-motion`, and Economy / Game mode.
 
 ---
 
